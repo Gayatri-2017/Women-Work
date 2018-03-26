@@ -1,0 +1,180 @@
+<php
+
+session_start();
+$servername = "localhost";
+$naam=$_REQUEST["u"];
+$pasword=md5($_REQUEST["p"]);
+$dbname = "sprdh";
+$username="root";
+$password="";
+
+$_SESSION["username"]=$naam;
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+<style>
+.column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #87CEEB;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+<body>
+<ul>
+    <li><a href="#section-1" offset="60" du-smooth-scroll="section-1" du-scrollspy="" target="_parent" class="">EVENT OVERVIEW</a></li>
+    <!-- ngIf: showGallerySection -->
+    <li><a href="#section-2" offset="60" du-smooth-scroll="section-2" du-scrollspy="" ng-bind="ticketVar" class="ng-binding" target="_parent">Tickets</a></li>
+    <li><a href="#section-3" offset="60" du-smooth-scroll="section-3" du-scrollspy="" target="_parent" class="">VENUE</a></li>
+</ul>
+<div class = "row">
+    <div class="column" id = "section-1" style = "background-color:#1E90FF">
+                
+        <h1> Event Name </h1>
+
+        <div>
+            <!-- ngRepeat: keyword in keywordsOfEvent --><!-- ngIf: keywordsOfEvent.length > 0 -->
+                <span>
+                        Category
+                </span>
+           
+        </div>
+        <div>
+
+                <span>Venue</span>
+            
+        </div>
+
+        <div class="wraps date-time-wrap">
+        <!-- <i class="ion-android-calendar icon"></i> -->
+            <span >
+
+                <i class="ion-android-calendar ng-scope">
+                    
+                </i>
+                <span class="ng-scope">
+                    Dates(s)
+                </span>
+                <br class="ng-scope"> 
+                <i class="ion-clock ng-scope">
+                    
+                </i>
+                <span class="ng-scope">
+                    Time
+                </span>
+            </span>
+        </div>
+
+        <button type="button">Buy Ticket</button>
+
+        <br>
+                
+        </div>
+
+        <p>
+
+            <div class="column" style="background-color:#87CEFA">
+                <section id="section-1">
+                    <h2 class="description-headings">
+                        Overview
+                    </h2>
+                    <div id="event-description">
+                        <p class="ng-scope">
+                            &nbsp; Enter Text here
+                        </p>
+
+                            <a href="#" >Event Link</a>
+                        </p>
+
+
+                    </div>
+                </section>
+                        <!-- ngIf: showGallerySection -->
+                <section id="section-2">
+                    <h2 class="description-headings ng-binding" ng-bind="ticketVar">
+                        Tickets
+                    </h2>
+                    <p class="ng-binding">Tickets for "
+                        <span ng-bind="eventData.event.name" class="ng-binding">
+                            Event Name
+                        </span>" 
+                        can be purchased here. 
+                    </p>
+                    <button type="button">
+                        Buy Ticket
+                    </button>
+
+                </section>
+                <section id="section-3" style="padding-bottom:250px;margin:0">
+                    <h2 class="description-headings">VENUE</h2>
+                    <p class="text-ups text-primary ng-binding">
+                        Ramrao Adik Institute of Technology, Sector 7, Nerul, Navi Mumbai, India
+                    </p>
+                    <div>
+                        <iframe src="//www.google.com/maps/embed/v1/place?q=vivekanand%20education%20society's%20institute%20of%20technology
+                        &zoom=17
+                        &key=AIzaSyDs5aEY5WFUTaVQdyZRzE6zXLmyNrKEFpg" width="100%" height= "300px">
+                        <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5aEY5WFUTaVQdyZRzE6zXLmyNrKEFpg&callback=initMap"
+  type="text/javascript"></script>-->
+                        </iframe>
+
+                    </div>
+                </section>
+
+            </div>
+            
+        </p>
+        <p>
+            <div class="column" style="background-color:#1E90FF">
+                <h5 >ORGANIZER</h5>
+                
+                <h3 class="name-organizer">
+                    Organizer Name
+
+                
+                </h3>
+                <button>
+                    <span id="sendMessage">
+                        Send Message
+                    </span>
+                </button>
+            </div>
+        </p>
+
+    </div>
+    </body>
+</HTML>
+
+
+
+
+
+            
+

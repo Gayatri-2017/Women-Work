@@ -1,0 +1,180 @@
+<php
+
+<HTML>
+<style>
+.column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #87CEEB;
+}
+
+#li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+<body>
+<ul id="ul1">
+    <li id="li"><a href="#section-1" offset="60" du-smooth-scroll="section-1" du-scrollspy="" target="_parent" class="">EVENT OVERVIEW</a></li>
+    <!-- ngIf: showGallerySection -->
+    <li id="li"><a href="#section-2" offset="60" du-smooth-scroll="section-2" du-scrollspy="" ng-bind="ticketVar" class="ng-binding" target="_parent">Tickets</a></li>
+    <li id="li"><a href="#section-3" offset="60" du-smooth-scroll="section-3" du-scrollspy="" target="_parent" class="">VENUE</a></li>
+</ul>
+<div class = "row">
+    <div class="column" id = "section-1" style = "background-color:#1E90FF">
+                
+        <h1>Unusual recipes using rice</h1>
+
+        <div>
+            <!-- ngRepeat: keyword in keywordsOfEvent --><!-- ngIf: keywordsOfEvent.length > 0 -->
+                <span>
+                        Category: Cooking
+                </span>
+           
+        </div>
+        <div>
+
+                <span>Venue: Mulund(W)</span>
+            
+        </div>
+
+        <div class="wraps date-time-wrap">
+        <!-- <i class="ion-android-calendar icon"></i> -->
+            <span >
+
+                <i class="ion-android-calendar ng-scope">
+                    
+                </i>
+                <span class="ng-scope">
+                    Dates(s):27th March 2018
+                </span>
+                <br class="ng-scope"> 
+                <i class="ion-clock ng-scope">
+                    
+                </i>
+                <span class="ng-scope">
+                    Time: 09:00:00
+                </span>
+                <span class="ng-scope">
+                    Cost: Free
+                </span>
+            </span>
+        </div>
+
+        <button type="button">Buy Ticket</button>
+
+        <br>
+                
+        </div>
+
+        <p>
+
+            <div class="column" style="background-color:#87CEFA">
+                <section id="section-1">
+                    <h2 class="description-headings">
+                        Overview
+                    </h2>
+                    <div id="event-description">
+                        <p class="ng-scope">
+                            <p>&nbsp; So all you people with a great cooking passion, send us unusual recipes using rice.</p>
+                            <p>So,what are you all waiting for?? Get all charged up and send us your creative ideas and recipes now and win a cookbook on "chawal" </p>
+                            <p>Here is recipe<ahref="https: www.tarladalal.com="" rice-and-spinach-stuffed-shell-pasta-39494r="">click here</ahref="https:></p>
+
+                        </p>
+                        <div style="margin:20px 0px;">
+                            <span style="font-size:130%;">
+                                Contest Rules
+                            </span>
+                            <ul style="font-size:90%;">
+                                <li>Submissions must be original</li>
+                                <li>Winners would be selected by a panel of cooks headed by Tarla Dalal. The decision arrived at by the panel would be final and not open to debate by the contestants.</li>
+                                <li>The recipe should be preferably for four persons.</li>
+                                <li>Ingredients must be brought by participants</li>
+                            </ul>
+
+                            <a href="#" >www.tarladalal.com/unusualreceipiesusingrice.html</a>
+                        </p>
+
+
+                    </div>
+                </section>
+                        <!-- ngIf: showGallerySection -->
+                <section id="section-2">
+                    <h2 class="description-headings ng-binding" ng-bind="ticketVar">
+                        Tickets
+                    </h2>
+                    <p class="ng-binding">Tickets for "
+                        <span ng-bind="eventData.event.name" class="ng-binding">
+                            Unusual recipes using rice
+                        </span>" 
+                        can be purchased here. 
+                    </p>
+                    <button type="button">
+                        Buy Ticket
+                    </button>
+
+                </section>
+                <section id="section-3" style="padding-bottom:250px;margin:0">
+                    <h2 class="description-headings">VENUE</h2>
+                    <p class="text-ups text-primary ng-binding">
+                        Tower 3 Runwal Greens, Mulund Goregaon Link Rd, Mulund West, Mumbai, Maharashtra
+                    </p>
+                    <div>
+                        Display Google Map for location
+                    </div>
+                </section>
+
+            </div>
+            
+        </p>
+        <p>
+            <div class="column" style="background-color:#1E90FF">
+                <h5 >ORGANIZER</h5>
+                
+                <h3 class="name-organizer">
+                    Organizer Name
+
+                
+                </h3>
+                <button>
+                    <span id="sendMessage">
+                        Send Message
+                    </span>
+                </button>
+            </div>
+        </p>
+
+    </div>
+    </body>
+</HTML>
+
+
+
+
+
+            
+

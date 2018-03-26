@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login V5</title>
+</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+	</style>
+</head>
+<body>	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/images.png');">
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+				<form class="login100-form validate-form flex-sb flex-w" id='validate' method="post" action='validate.php'>
+	<div class="container">
+	<span class="login100-form-title p-b-53">
+						Login as...
+					</span>
+
+ <label class="radio-inline">
+ 
+      <input type="radio" name="type" value="seller" >Seller
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="type" value="buyer">Buyer
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="type" value="organizer">Organizer<br><br>
+    </label>
+	<div class="label">
+		<input id="username" type="text" name="username" placeholder="Username: "><br>
+
+		<input id="password" type="password" name="password" placeholder="Password :"><br><br><br><br>
+
+		<button type="submit" class="btn btn-secondary"/>Log In</button><br><br>
+		</form>
+		<!--<button id="btnSignup" class="btn btn-secondary">Sign Up</button><br>-->
+		Not yet registered? <a href = "index.html" style="font-size:20px">  Sign Up</a>	
+		<!--<button id="btnLogOut" class="btn btn-secondary">LogOut</button><br>-->
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+<html>
+<head>
+<title>Login V5</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+</head>
+<style>	
+label {
+  display: inline-block;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+	</style>
+
+<body>	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/images.png');">
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+				<form class="login100-form validate-form flex-sb flex-w" id='validate' method="post" action='insertorganizer.php'>
+	<div class="container">
+	<span class="login100-form-title p-b-53">
+						I want to hold an event:
+					</span>
+
+	<div class="label">
+					
+	<div class="dropdown">
+  <button class="dropbtn">Category</button>
+  <div class="dropdown-content">
+    <input type="radio" name="category" value="cw">Content Writing<br>
+  <input type="radio" name="category" value="id">Interior Designing<br>
+  <input type="radio" name="category"  value="cook">Cooking<br>
+  <input type="radio" name="category"  value="stitch">Stitching<br>
+  <input type="radio" name="category"  value="hand">Handicraft<br>
+  <input type="radio" name="category"  value="teach">Teaching<br>
+  <input type="radio"  name="category" value="arti">Artifact Making<br>
+  <input type="radio" name="category"  value="baby">Baby sitting<br>
+  <input type="radio"  name="category" value="beauty">Parlor services<br>
+  </div>
+  </div>
+  <br>
+  <input type="text" name="eventname" placeholder="Event Name"><br>
+		
+		<input id="oedesc" type="text" name="oedesc" placeholder="Description"><br>
+
+		<input type="text" name="venue" placeholder="Venue"><br>
+		<input id="date" type="text" name="oedate" placeholder="Date"><br>
+
+		<input type="text" name="oetime" placeholder="Time"><br>
+		<input type="text" name="oeprice" placeholder="Price"><br>
+		
+		<button type="submit" class="btn btn-secondary"/>Submit Event</button><br><br>
+		<br><br><br><br>
+
+		</form>
+		<!--<button id="btnSignup" class="btn btn-secondary">Sign Up</button><br>-->
+		Not yet registered? <a href = "index.html" style="font-size:20px">  Sign Up</a>	
+		<!--<button id="btnLogOut" class="btn btn-secondary">LogOut</button><br>-->
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
